@@ -15,7 +15,8 @@ layout: default
 
     </article>
 
-    <button class="filter-by-area" onclick="filterByTag('Downtown')">Show Downtown Listings</button>
+    <button class="filter-by-area" onclick="filterByTag('Downtown')">All</button>
+    <button class="filter-by-area" onclick="filterByTag('Downtown')">Downtown</button>
 
     <ul class="list  list--posts">
     {% for page in site.posts %}
@@ -178,6 +179,8 @@ layout: default
     };
 
     function filterByTag(tag) {
+
+        if (tag != "All") {
         const posts = document.querySelectorAll('.item--post');
         posts.forEach(post => {
             const postTag = post.getAttribute('data-area');
@@ -187,6 +190,7 @@ layout: default
                 post.style.display = 'none';
             }
         });
+    }
     }
 
     document.addEventListener("DOMContentLoaded", filterPosts);
