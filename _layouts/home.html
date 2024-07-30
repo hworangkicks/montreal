@@ -34,6 +34,9 @@ layout: default
 </main>
 
 <script>
+
+    const postListz = document.querySelectorAll('.item--post');
+
     function filterPosts() {
         const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         const now = new Date();
@@ -180,18 +183,19 @@ layout: default
 
     function filterByTagzz(tag) {
 
-        if (tag != "All") {
-        const posts = document.querySelectorAll('.item--post');
-        posts.forEach(post => {
-            const postTag = post.getAttribute('data-area');
-            console.log(postTag);
-            console.log(tag)
-            if (postTag != tag) {
-                post.style.display = 'none';
-            }
-        });
+    postListz.forEach(post => {
+      post.style.display = '';
+    });
+
+    if (tag != "All") {
+      postListz.forEach(post => {
+        const postTag = post.getAttribute('data-area');
+        if (postTag != tag) {
+          post.style.display = 'none';
+        }
+      });
     }
-    }
+  }
 
     document.addEventListener("DOMContentLoaded", filterPosts);
     window.addEventListener("popstate", filterPosts);
