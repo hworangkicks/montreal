@@ -15,8 +15,8 @@ layout: default
 
     </article>
 
-    <span class="tag" onclick="filterByTag('Downtown')">All</button>
-    <span class="tag" onclick="filterByTag('Downtown')">Downtown</button>
+    <span class="tag" onclick="filterByTagzz('All')">All</button>
+    <span class="tag" onclick="filterByTagzz('Downtown')">Downtown</button>
 
     <ul class="list  list--posts">
     {% for page in site.posts %}
@@ -178,7 +178,7 @@ layout: default
         }
     };
 
-    function filterByTag(tag) {
+    function filterByTagzz(tag) {
 
         if (tag != "All") {
         const posts = document.querySelectorAll('.item--post');
