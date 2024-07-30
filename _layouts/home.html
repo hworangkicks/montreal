@@ -19,7 +19,7 @@ layout: default
 
     <ul class="list  list--posts">
     {% for page in site.posts %}
-      <li class="item  item--post" data-day="{{ page.day }}" data-start="{{ page.start }}" data-end="{{ page.end }}" data-recurring="{{ page.recurring }}" data-title="{{ page.title }}">
+      <li class="item  item--post" data-day="{{ page.day }}" data-start="{{ page.start }}" data-end="{{ page.end }}" data-recurring="{{ page.recurring }}" data-title="{{ page.title }}" data-area="{{ page.area }}">
         <article class="article  article--post  typeset">
 
           <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2><span class="tag">{{ page.area }}</span>
