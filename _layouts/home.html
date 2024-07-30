@@ -181,9 +181,9 @@ layout: default
         const posts = document.querySelectorAll('.item--post');
         posts.forEach(post => {
             const postTag = post.getAttribute('data-area');
-            if (postTag === tag) {
-                post.style.display = '';
-            } else {
+            console.log(postTag);
+            console.log(tag)
+            if (postTag != tag) {
                 post.style.display = 'none';
             }
         });
