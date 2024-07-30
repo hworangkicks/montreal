@@ -15,8 +15,8 @@ layout: default
 
     </article>
 
-    <span class="tag" onclick="filterByTagzz('All')">All</button>
-    <span class="tag" onclick="filterByTagzz('Downtown')">Downtown</button>
+    <button class="area-button" onclick="filterByTagzz('All')">All</button>
+    <button class="area-button" onclick="filterByTagzz('Downtown')">Downtown</button>
 
     <ul class="list  list--posts">
     {% for page in site.posts %}
@@ -237,7 +237,17 @@ layout: default
         margin-right: 20px;
     }
 
-    .tag:hover {
+    .area-button {
+        background-color: #ffdfdf;
+        color: #333;
+        padding: 2px 6px;
+        border-radius: 12px;
+        font-size: 15px;
+        border: 1px solid #ddd;
+        margin-right: 20px;
+    }
+
+    .area-button:hover {
         background-color: #ffdcdc;
     }
 </style>
