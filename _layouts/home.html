@@ -15,8 +15,8 @@ layout: default
 
     </article>
 
-    <button class="filter-by-area" onclick="filterByTag('Downtown')">All</button>
-    <button class="filter-by-area" onclick="filterByTag('Downtown')">Downtown</button>
+    <span class="tag" onclick="filterByTag('Downtown')">All</button>
+    <span class="tag" onclick="filterByTag('Downtown')">Downtown</button>
 
     <ul class="list  list--posts">
     {% for page in site.posts %}
@@ -234,16 +234,7 @@ layout: default
         border: 1px solid #ddd;
     }
 
-    .filter-by-area {
-        background-color: #ffdfdf;
-        color: #333;
-        padding: 2px 6px;
-        border-radius: 12px;
-        font-size: 15px;
-        border: 1px solid #ddd;
-    }
-
-    .filter-button:hover {
+    .tag:hover {
         background-color: #ffdcdc;
     }
 </style>
